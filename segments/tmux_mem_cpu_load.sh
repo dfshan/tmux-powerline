@@ -3,9 +3,9 @@
 run_segment() {
 	stats=""
 	if type $TMUX_PLUGIN_MANAGER_PATH/tmux-mem-cpu-load/tmux-mem-cpu-load > /dev/null 2>&1; then
-		stats=$($TMUX_PLUGIN_MANAGER_PATH/tmux-mem-cpu-load/tmux-mem-cpu-load)
+		stats=$($TMUX_PLUGIN_MANAGER_PATH/tmux-mem-cpu-load/tmux-mem-cpu-load -v)
 	elif type tmux-mem-cpu-load >/dev/null 2>&1; then
-		stats=$(tmux-mem-cpu-load)
+		stats=$(tmux-mem-cpu-load -v)
 	else
 		return
 	fi
